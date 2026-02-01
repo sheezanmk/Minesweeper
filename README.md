@@ -1,35 +1,44 @@
-## Getting Started
+A simple version of the classic Minesweeper game built using Java, playable in the console.
+It involves core game logic such as grid handling, mine placement, user input, and win/loss conditions.
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+Features:
 
-## Folder Structure
+10 × 10 grid
 
-The workspace contains two folders by default, where:
+10 mines placed randomly on the board
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
+User reveals cells by entering grid coordinates
 
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
+Each revealed cell shows a number from 0–8 indicating how many mines surround it
 
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
+If a mine is revealed → BOOM! Game over
 
-## Dependency Management
+If all safe cells are revealed → You win
 
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+Grid is re-rendered after every user command
 
-private String getSymbol(Cell cell, boolean revealMines) {
-if (cell.isRevealed()) {
-if (cell.isMine()) {
-return revealMines ? "\*" : ".";
-}
-return String.valueOf(cell.getAdjacentMines());
-}
+Mines are revealed only when the game ends
 
-    // not revealed
-    if (revealMines && cell.isMine()) {
-        return "*";
-    }
+How to Play :
 
-    return ".";
+Run the program.
 
-}
+You will see a 10×10 grid with row and column indices (0–9).
+
+Enter a row and column to reveal a cell.
+
+Game Rules:
+
+Revealing a mine ends the game immediately.
+
+Revealing a safe cell shows how many mines surround it.
+
+The game is won when all non-mine cells are revealed.
+
+How to Run :
+Compile all java files:
+`javac *.java
+`
+
+Run the game :
+`java App`

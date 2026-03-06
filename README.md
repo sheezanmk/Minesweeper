@@ -9,17 +9,8 @@ A simple version of the classic Minesweeper game built using Java, playable in t
 === Minesweeper (Console) ===
 Enter your move as: row column (both 0-9)
 
-0 1 2 3 4 5 6 7 8 9
-0 . . . . . . . . . .
-1 . . . . . . . . . .
-2 . . . . . . . . . .
-3 . . . 0 . . . . . .
-4 . . . . . . . . . .
-5 . . . . . . . . . .
-6 . . . . . . . . . .
-7 . . . . . . . . . .
-8 . . . . . . . . . .
-9 . . . . . . . . . .
+<img width="424" height="369" alt="image" src="https://github.com/user-attachments/assets/d025f432-e88c-4ddc-a276-af00d797ab73" />
+
 
 - Symbols used:
 

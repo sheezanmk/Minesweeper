@@ -1,48 +1,136 @@
-<<<<<<< HEAD
+## Minesweeper
 
-=======
-A simple version of the classic Minesweeper game built using Java, playable in the console.
-It involves core game logic such as grid handling, mine placement, user input, and win/loss conditions.
+A simple version of the classic Minesweeper game built using Java, playable in the console. It involves core game logic such as grid handling, mine placement, user input, and win/loss conditions. It is built as a learning exercise to practice Object-oriented design, 2D grid algorithms, Game logic implementation.
 
-Features:
+## Snippet
 
-10 × 10 grid
+- Example gameplay:
 
-10 mines placed randomly on the board
+=== Minesweeper (Console) ===
+Enter your move as: row column (both 0-9)
 
-User reveals cells by entering grid coordinates
+0 1 2 3 4 5 6 7 8 9
+0 . . . . . . . . . .
+1 . . . . . . . . . .
+2 . . . . . . . . . .
+3 . . . 0 . . . . . .
+4 . . . . . . . . . .
+5 . . . . . . . . . .
+6 . . . . . . . . . .
+7 . . . . . . . . . .
+8 . . . . . . . . . .
+9 . . . . . . . . . .
 
-Each revealed cell shows a number from 0–8 indicating how many mines surround it
+- Symbols used:
 
-If a mine is revealed → BOOM! Game over
+| Symbol | Meaning                     |
+| ------ | --------------------------- |
+| `.`    | Hidden cell                 |
+| `0–8`  | Number of surrounding mines |
+| `*`    | Mine (shown when game ends) |
 
-If all safe cells are revealed → You win
+## Requirements
 
-Grid is re-rendered after every user command
+The goal of this project was to recreate a simplified Minesweeper game playable in the Java console.
 
-Mines are revealed only when the game ends
+The project focuses on implementing core programming concepts such as:
 
-How to Play :
+- Object Oriented Programming
 
-Run the program.
+- 2D arrays
 
-You will see a 10×10 grid with row and column indices (0–9).
+- Game state management
 
-Enter a row and column to reveal a cell.
+- User input handling
 
-Game Rules:
+- Randomized mine placement
 
-Revealing a mine ends the game immediately.
+- Console rendering
 
-Revealing a safe cell shows how many mines surround it.
+Players reveal cells by entering coordinates. The game continues until a mine is hit or all safe cells are revealed.
 
-The game is won when all non-mine cells are revealed.
+## Stack Used
 
-How to Run :
-Compile all java files:
-`javac *.java
-`
+# Java
 
-Run the game :
-`java App`
->>>>>>> 961840d42dbb840fbd0ecf184bb549aaa49ecd54
+- Standard Java Libraries
+
+- Scanner for user input
+
+- Math.random() for mine placement
+
+Java was chosen because the project focuses on object-oriented design and algorithmic thinking rather than UI development.
+
+## Build Steps
+
+- Compile the project
+- javac \*.java
+
+- Run the program
+  - java Main
+
+- Example input
+  - Row (0-9): 3
+  - Col (0-9): 7
+
+## Design Goals
+
+The main design goal was to build a clear separation of responsibilities between classes.
+
+The project follows a simple object-oriented structure:
+
+- Cell → represents a single square on the board
+- Board → contains the game logic and grid
+- Game → manages user interaction and rendering
+- Main → entry point for the program
+
+Separating responsibilities helps make the project easier to maintain and extend.
+
+- For example:
+  - The Cell class stores only the data related to a single square.
+
+  - The Board class handles all grid operations and game rules.
+
+  - The Game class manages input, rendering, and game flow.
+
+  - This approach keeps each class focused on a single responsibility.
+
+## Features
+
+- 10 × 10 Minesweeper grid
+
+- Random placement of 10 mines
+
+- Safe cell counting for surrounding mines (0–8)
+
+- User input via row and column coordinates
+
+- Grid rendering after every move
+
+- Mine detection and game over logic
+
+- Win detection when all safe cells are revealed
+
+- Console-based interface
+
+## Known Issues
+
+- Cells displaying 0 do not cascade to reveal neighboring safe cells (full Minesweeper behaviour).
+
+- Input requires row and column separately instead of a single command (row col).
+
+These limitations were acceptable for the MVP scope.
+
+## Future Goals
+
+If more time were available, the following features would be added:
+
+- Cascade reveal for 0 cells
+
+- Single command input (row col)
+
+- Mine flagging feature
+
+- Improved console visuals (borders and colours)
+
+- Configurable board size and mine count
